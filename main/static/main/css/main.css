@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+body {
+    background-color: blue;
+    background-image:url ('../main/img/gr.jpg');
+
+}
+h1 {
+    color: blue;
+    background-color: yellow;
+    border: 1px solid black;
+    text-align: center
+}
+h2 {
+    color: blue;
+    background-color: yellow;
+    border: 1px solid black;
+    text-align: center
+}
+
+
+p {
+  color: red;
+  text-align: center
+}
+
+span{
+    font-family: cursive;
+    font-size: 40;
+    color: red;
+    text-align: center;
+    margin: 20px;
+}
+ul {
+  list-style: none;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  font-family: 'Lora', serif;
+  transition: .5s linear;
+  text-align: center
+}
+i {
+  margin-right: 10px;
+}
+nav {
+  display: block;
+  width: 100%;
+  margin: 0 auto 30px;
+}
+
+.features{
+    background-color: lightblue;
+    color: yellow;
+    text-align: center
+}
+
+
+.navigation {
+  background: rgba(255,255,255,.5);
+  box-shadow: 3px 0 7px rgba(0,0,0,.3);
+  padding: 20px;
+
+}
+.navigation:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.logo {display: inline-block;}
+.menu-main {
+  list-style: none;
+  margin: 0;
+  padding: 1em 0;
+  float: right;
+  text-align: center;
+}
+
+
+.menu-main li {
+display: inline-block;
+text-align: center;}
+
+.menu-main a {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  line-height: 61px;
+  padding-left: 20px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-family: 'Arimo', sans-serif;
+  font-weight: bold;
+  color: #F73E24;
+  transition:.3s linear;
+  padding: 1em;
+  background: rgba(177, 152, 145, .3);
+  border-right: 1px solid #b19891;
+  color: #695753;
+}
+
+.menu-main ul:{
+  padding: 1em 0;
+  background: #ECDAD1;
+}
+.menu-main a:hover{
+background-color: orange;
+}
+.menu-main a:before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  background: #F73E24;
+  position: absolute;
+  left: 50%;
+  transform: rotate(45deg) translateX(6.5px);
+  opacity: 0;
+  transition: .3s linear;
+}
+.menu-main a:hover:before {opacity: 1;}
+
+}
+@media (max-width: 660px) {
+.menu-main {
+  float: none;
+  padding-top: 20px;
+}
+.top-menu {
+  text-align: center;
+  padding: 20px 0 0 0;
+}
+.menu-main a {padding: 0 10px;}
+.menu-main a:before {transform: rotate(45deg) translateX(-6px);}
+}
+@media (max-width: 600px) {
+.menu-main li {display: block;}
+}

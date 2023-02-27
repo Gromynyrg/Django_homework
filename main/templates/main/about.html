@@ -1,0 +1,19 @@
+
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}Страница обо мне{% endblock %}
+{% block content %}
+<h1>Это страница обо мне</h1>
+<hr>
+<div class="imgblock">
+<p> Но тут почему-то ничего нет </p>
+<img src="{% static 'main/img/meme.gif'%}" align="center">
+</div>
+<style>
+  .imgblock {
+    text-align: center;
+}
+</style>
+
+{% include 'main/test.html' %}
+{% endblock %}
