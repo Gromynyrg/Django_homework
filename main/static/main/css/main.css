@@ -19,7 +19,7 @@ h2 {
 
 
 p {
-  color: red;
+  color: lightblue;
   text-align: center
 }
 
@@ -49,6 +49,11 @@ nav {
   margin: 0 auto 30px;
 }
 
+.features{
+    background-color: lightblue;
+    color: yellow;
+    text-align: center
+}
 
 
 .navigation {
