@@ -1,0 +1,22 @@
+{% extends 'main/layout.html' %}
+
+
+{% block title %}Форма по добавлению статьи{% endblock %}
+
+{% block content %}
+
+    <div class="features">
+        <h1 class="fw-light">Форма по добавлению статьи</h1>
+        <p class="lead text-muted" > Создание новости </p>
+    </div>
+    <form method="post">
+        {% csrf_token %}
+        <span>{{ error }}</span>
+        {{ form.title }}<br>
+        {{ form.anons }}<br>
+        {{ form.full_text }}<br>
+        {{ form.date }} <br>
+        <button type="submit" class="btn btn-success "> Опубликовать </button> <br>
+    </form>
+
+{% endblock %}
