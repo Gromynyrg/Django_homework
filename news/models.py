@@ -1,4 +1,6 @@
 from django.db import models
+from django.urls import reverse
+from .libs.slugify import slugify
 
 # Create your models here.
 
@@ -8,6 +10,7 @@ class Articles(models.Model):
     anons = models.CharField('Анонс', max_length=250)
     full_text = models.TextField('Статья')
     date = models.DateField('Дата публикации')
+    slug = models.SlugField('url', max_length=255, unique=True)
 
     class Meta:
         verbose_name = 'Новость'
@@ -17,6 +20,10 @@ class Articles(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return f'/news/{self.id}'
+        return reverse('news-detail', kwargs={'slug': self.slug})
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        super().save(*args, **kwargs)
 
 

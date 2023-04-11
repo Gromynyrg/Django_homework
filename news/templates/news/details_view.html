@@ -6,7 +6,7 @@
         <p>{{article.date}}</p>
         <p>{{article.full_text}}</p>
         <br>
-        <a href="{% url 'news-update' article.id %}"><button class="btn btn-info"> Редактировать новость </button></a>
-        <a href="{% url 'news-delete' article.id %}"><button class="btn btn-danger"> Удалить новость </button></a>
+        <a href="{% url 'news-update' article.slug %}"><button class="btn btn-info"> Редактировать новость </button></a>
+        <a href="{% url 'news-delete' article.slug %}"><button class="btn btn-danger"> Удалить новость </button></a>
     </div>
 {% endblock %}

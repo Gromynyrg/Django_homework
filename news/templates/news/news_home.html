@@ -15,7 +15,7 @@
             <div class="alert alert-warning">
                     <h3>{{ el.title }}</h3>
                     <p>{{ el.anons }}</p>
-                <a href="{% url 'news-detail' el.id %}"><button class="btn btn-warning"> Читать полную новость </button></a>
+                <a href="{% url 'news-detail' el.slug %}"><button class="btn btn-warning"> Читать полную новость </button></a>
             </div>
         {% endfor %}
     {% endif %}
