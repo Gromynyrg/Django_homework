@@ -3,6 +3,9 @@
 {% block content %}
     <div class="features">
         <h2>{{article.title}}</h2>
+        <div>
+            <a href="{% url 'news-category' article.category.id %}">{{article.category.name}}</a>
+        </div>
         <p>{{article.date}}</p>
         <p>{{article.full_text}}</p>
         <br>

@@ -1,11 +1,25 @@
 {% extends 'main/layout.html' %}
 
-{% block title %}Новости{% endblock %}
+{% block title %}
+    {% if current_category %}
+       {{ current_category.name}}
+    {% else %}
+        Новости на сайте
+    {% endif %}
+{% endblock %}
 
 {% block content %}
     <div class="features">
         <h1 class="fw-light">Новости</h1>
-        <p class="lead text-muted" > Новостной раздел сайта </p>
+            {% if current_category %}
+                <p class="lead text-muted" >{{ current_category.name}}</p>
+            {% else %}
+                <p class="lead text-muted" > Новостной раздел сайта </p>
+            {% endif %}
+    </div>
+    <div class="info_news">
+        <p>Кол-во новостей: {{news_count}}
+        </p>
     </div>
     <a href="/news/create"> <button class="btn btn-info">  Добавить новость  </button> </a>
     {% if not news %}

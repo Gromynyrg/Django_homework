@@ -9,5 +9,6 @@ urlpatterns = [
                   path('create/', views.create, name='create'),
                   path('<slug:slug>', views.NewsDetailView.as_view(), name='news-detail'),
                   path('<slug:slug>/update', views.NewsUpdateView.as_view(), name='news-update'),
-                  path('<slug:slug>/delete', views.NewsDeleteView.as_view(), name='news-delete')
+                  path('<slug:slug>/delete', views.NewsDeleteView.as_view(), name='news-delete'),
+                  path('category/<int:pk>', views.CategoryAllNewsView.as_view(), name='news-category')
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
